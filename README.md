@@ -7,11 +7,13 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 The app needs you to provide some secrets as a local `.env.local` file. 
 
-You'll need an etherscan API key, which you can get from [here](https://docs.etherscan.io/getting-started/viewing-api-usage-statistics)
+You'll need an Discord API key, which you can get from [here](https://discord.com/developers/docs/topics/oauth2)
 
 Set it up as follows
 ```
-NEXT_PUBLIC_ETHERSCAN_API_KEY=<< enter the key here >>
+DISCORD_CLIENT_ID=<< Client ID >>
+DISCORD_CLIENT_SECRET=<< Client Secret >>
+NEXTAUTH_SECRET=<< Random Secret >>
 ```
 
 Install the requirements from the `package.json` file with 
