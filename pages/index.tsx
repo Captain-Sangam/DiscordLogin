@@ -1,7 +1,7 @@
 import Image from "next/image";
 import type { NextPage } from "next";
 import { signIn, signOut, useSession } from "next-auth/react";
-import { Flex, Button, Text } from "@chakra-ui/react";
+import { Flex, Button, Text, VStack } from "@chakra-ui/react";
 import Layout from "../components/Layout";
 
 const Home: NextPage = () => {
@@ -29,22 +29,42 @@ const Home: NextPage = () => {
               style={{ borderRadius: "50%" }}
             />
           )}
-          <Text fontSize={18} align={"center"}>
-            Hello, {user?.name}!
-          </Text>
-          <Button
-            w={"30%"}
-            fontWeight={"bold"}
-            letterSpacing={1}
-            borderRadius={"md"}
-            bgGradient={"linear(to-r, green.300, green.500)"}
-            color={"white"}
-            boxShadow={"2xl"}
-            disabled={false}
-            onClick={() => signOut()}
-          >
-            Sign out
-          </Button>
+          <VStack align="center">
+            <Text fontSize={18} align={"center"}>
+              Hello, {user?.name}!
+            </Text>
+            <Button
+              w={"100%"}
+              fontWeight={"bold"}
+              letterSpacing={1}
+              borderRadius={"md"}
+              bgGradient={"linear(to-r, green.300, green.500)"}
+              color={"white"}
+              boxShadow={"2xl"}
+              disabled={false}
+            >
+              <a
+                href="https://discord.com/invite/e2jpB44PCU"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Checkout our Discord Server
+              </a>
+            </Button>
+            <Button
+              w={"30%"}
+              fontWeight={"bold"}
+              letterSpacing={1}
+              borderRadius={"md"}
+              bgGradient={"linear(to-r, green.300, green.500)"}
+              color={"white"}
+              boxShadow={"2xl"}
+              disabled={false}
+              onClick={() => signOut()}
+            >
+              Sign out
+            </Button>
+          </VStack>
         </Flex>
       </div>
     );

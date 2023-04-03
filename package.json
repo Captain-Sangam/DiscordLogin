@@ -10,6 +10,7 @@
   "dependencies": {
     "@chakra-ui/icons": "^2.0.18",
     "@chakra-ui/react": "^2.5.5",
+    "jsonwebtoken": "^9.0.0",
     "next": "^13.2.4",
     "next-auth": "^4.21.1",
     "react": "^18.2.0",
