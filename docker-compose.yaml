@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  DiscordLogin:
+    container_name: DiscordLogin
+    build: .
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/app/
